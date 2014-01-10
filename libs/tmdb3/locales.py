@@ -147,7 +147,7 @@ def get_locale(language=-1, country=-1):
     global syslocale
     # pull existing stored values
     if syslocale is None:
-        loc = Locale(None, None, locale.getdefaultlocale()[1])
+        loc = Locale('fr', 'FR', locale.getdefaultlocale()[1])
     else:
         loc = syslocale
 
