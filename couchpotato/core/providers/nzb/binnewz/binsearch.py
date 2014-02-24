@@ -39,7 +39,7 @@ class BinSearch(NZBDownloader):
 
             foundName = None
             sizeInMegs = None
-            for elem in binSearchSoup.findAll(lambda tag: tag.name=='tr' and (tag.get('bgcolor') == '#FFFFFF') and 'size:' in tag.text):
+            for elem in binSearchSoup.findAll(lambda tag: tag.name=='tr' and 'size:' in tag.text):
                 if foundName:
                     break
                 for checkbox in elem.findAll(lambda tag: tag.name=='input' and tag.get('type') == 'checkbox'):
